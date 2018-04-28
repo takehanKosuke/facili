@@ -11,7 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180428145644) do
+ActiveRecord::Schema.define(version: 20180428172920) do
+
+  create_table "departments", force: :cascade do |t|
+    t.integer  "depat_cord", limit: 4
+    t.integer  "faculty",    limit: 4
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  create_table "lessons", force: :cascade do |t|
+    t.integer  "department_id", limit: 4
+    t.integer  "wday",          limit: 4
+    t.integer  "period",        limit: 4
+    t.integer  "room_namber",   limit: 4
+    t.integer  "term_id",       limit: 4
+    t.string   "class_name",    limit: 255
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
+  create_table "terms", force: :cascade do |t|
+    t.integer  "year",       limit: 4
+    t.integer  "division",   limit: 4
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false
