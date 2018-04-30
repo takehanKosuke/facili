@@ -1,3 +1,4 @@
+<%= form_tag("/departmants",method: :post) do%>
 <h3>〜学部〜</h3>
 <div class="radio0">
   <label><input type="radio" name="faculty" value="1" checked=""> 健康メディカル学部 </label>
@@ -21,7 +22,7 @@
 <div class="radio">
   <label><input type="radio" name="depat_cord" value="6" > 健康栄養学科</label>
 </div>
-<h3>〜学年〜</h3>
+<!-- <h3>〜学年〜</h3>
 <div class="radio1">
   <label><input type="radio" name="years" value="1" checked=""> 1年</label>
 </div>
@@ -36,6 +37,10 @@
 </div>
 <div class="radio1">
   <label><input type="radio" name="years" value="5"> その他</label>
-</div>
+</div> -->
 
 <button class="btn btn-primary" type="submit"><%= link_to"マイページに戻る", "/users/#{@user.id}", method: :get %></button>
+
+<button class="btn btn-primary" type="submit" name="action" >
+  <i>設定する</i></button>
+<% end %>
