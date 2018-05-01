@@ -1,5 +1,13 @@
+<% if flash[:alert]%>
+<div class="alert alert-warning" role="alert">
+  管理者のみが行えるアクションです
+</div>
+<% end %>
 <button class="btn btn-primary" type="submit"><%= link_to"ログアウト", "/users/sign_out", method: :delete %></button>
 <button class="btn btn-primary" type="submit"><%= link_to"詳細設定", "/departmants/new", method: :get %></button>
+ <% if current_user.permission == 1 %>
+      <button class="btn btn-primary" type="submit"><%= link_to"授業作成", "/lessons/new", method: :get %></button>
+<% end %>
 
 <h3><%= @user.name %>のアカウントです</h3>
 
