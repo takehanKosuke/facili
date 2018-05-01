@@ -1,0 +1,101 @@
+<form>
+  <h3>〜学部〜</h3>
+<div class="radio0">
+  <label><input type="radio" name="faculty" value="1" checked=""> 健康メディカル学部 </label>
+</div>
+<h3>〜学科〜</h3>
+<div class="radio">
+  <label><input type="radio" name="depat_cord" value="1" checked=""> 臨床心理学科</label>
+</div>
+<div class="radio">
+  <label><input type="radio" name="depat_cord" value="2" > 柔道整復学科</label>
+</div>
+<div class="radio">
+  <label><input type="radio" name="depat_cord" value="3" > 言語聴覚学科</label>
+</div>
+<div class="radio">
+  <label><input type="radio" name="depat_cord" value="4" > 作業療法学科</label>
+</div>
+<div class="radio">
+  <label><input type="radio" name="depat_cord" value="5" > 理学療法学科</label>
+</div>
+<div class="radio">
+  <label><input type="radio" name="depat_cord" value="6" > 健康栄養学科</label>
+</div>
+<h3>〜学年〜</h3>
+<div class="radio1">
+  <label><input type="radio" name="years" value="1" checked=""> 1年</label>
+</div>
+<div class="radio1">
+  <label><input type="radio" name="years" value="2"> 2年</label>
+</div>
+<div class="radio1">
+  <label><input type="radio" name="years" value="3" > 3年</label>
+</div>
+<div class="radio1">
+  <label><input type="radio" name="years" value="4"> 4年</label>
+</div>
+
+  <h3>何曜？</h3>
+<div class="radio">
+  <label><input type="radio" name="wday" value="1" checked=""> 月曜</label>
+</div>
+<div class="radio">
+  <label><input type="radio" name="wday" value="2" > 火曜</label>
+</div>
+<div class="radio">
+  <label><input type="radio" name="wday" value="3" > 水曜</label>
+</div>
+<div class="radio">
+  <label><input type="radio" name="wday" value="4" > 木曜</label>
+</div>
+<div class="radio">
+  <label><input type="radio" name="wday" value="5" > 金曜</label>
+</div>
+<div class="radio">
+  <label><input type="radio" name="wday" value="6" > 土曜</label>
+</div>
+
+<h3>何限？</h3>
+
+<div class="radio1">
+  <label><input type="radio" name="period" value="1" checked=""> 1限</label>
+</div>
+<div class="radio1">
+  <label><input type="radio" name="period" value="2" > 2限</label>
+</div>
+<div class="radio1">
+  <label><input type="radio" name="period" value="3" > 3限</label>
+</div>
+<div class="radio1">
+  <label><input type="radio" name="period" value="4" > 4限</label>
+</div>
+<div class="radio1">
+  <label><input type="radio" name="period" value="5" > 5限</label>
+</div>
+<div class="radio1">
+  <label><input type="radio" name="period" value="6" > 6限</label>
+</div>
+
+<h3>前期？後期？</h3>
+<div class="radio3">
+  <label><input type="radio" name="division" value="1" checked=""> 前期</label>
+</div>
+<div class="radio3">
+  <label><input type="radio" name="division" value="2" > 後期</label>
+</div>
+
+  <div class="form-group">
+    <label>授業名</label>
+    <input type="name" class="form-control" placeholder="授業名">
+  </div>
+  <div class="form-group">
+    <label>教室番号</label>
+    <input type="room_namber" class="form-control" placeholder="教室番号">
+  </div>
+
+</form>
+
+<button class="btn btn-primary" type="submit"><%= link_to"授業を登録する", "/lessons", method: :POST %></button>
+
+<button class="btn btn-primary" type="submit"><%= link_to"マイページに戻る", "#", method: :get %></button>
