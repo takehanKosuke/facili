@@ -2,7 +2,7 @@ class UsersController < ApplicationController
    before_action :sign_in?, only: :show
 
   def show
-   @user = User.find(params[:id])
+   @user = User.find(current_user.id)
   end
 
   private

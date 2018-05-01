@@ -5,7 +5,7 @@ class DepartmantsController < ApplicationController
 
   def create
     Department.create(faculty: departmants_params[:faculty],depat_cord: departmants_params[:depat_cord])
-    redirect_to "/"
+    redirect_to "/users/#{:id}"
   end
 
 
