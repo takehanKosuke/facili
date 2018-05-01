@@ -13,11 +13,6 @@
 
 </head>
 <body>
-  <header>
-    <% if current_user.permission == 1 %>
-      <button class="btn btn-primary" type="submit"><%= link_to"授業作成", "/lessons", method: :post %></button>
-    <% end %>
-  </header>
 
 <%= yield %>
 
